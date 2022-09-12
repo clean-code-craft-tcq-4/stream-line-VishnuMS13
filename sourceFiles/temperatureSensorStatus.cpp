@@ -1,5 +1,5 @@
 #include <iostream>
-#include "../includes/temperatureSensorStatus.hpp"
+#include "temperatureSensorStatus.hpp"
 #include "random"
 
 using namespace std;
