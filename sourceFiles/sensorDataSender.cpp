@@ -3,7 +3,7 @@
 #include "../includes/chargeSensorStatus.hpp"
 #include "../includes/temperatureSensorStatus.hpp"
 #include <vector>
-#include "sensorDataSender.hpp"
+#include "../includes/sensorDataSender.hpp"
 
 using namespace std;
 
