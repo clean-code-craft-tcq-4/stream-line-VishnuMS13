@@ -1,5 +1,5 @@
 #include <iostream>
-#include "../includes/chargeSensorStatus.hpp"
+#include "chargeSensorStatus.hpp"
 #include "random"
 
 using namespace std;
