@@ -1,10 +1,10 @@
 #define CATCH_CONFIG_MAIN
 #include "test/catch.hpp"
 #include <iostream>
-#include "batterySensors/chargeStatus/chargeStatus.hpp"
-#include "batterySensors/temperature/temperature.hpp"
+#include "includes/chargeSensorStatus.hpp"
+#include "includes/temperatureSensorStatus.hpp"
 #include <vector>
-#include "sensorDataSender/sensorDataSender.hpp"
+#include "includes/sensorDataSender.hpp"
 
 using namespace std;
 
