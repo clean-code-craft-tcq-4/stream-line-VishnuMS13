@@ -1,7 +1,7 @@
 
 #include <iostream>
-#include "chargeSensorStatus.hpp"
-#include "temperatureSensorStatus.hpp"
+#include "../includes/chargeSensorStatus.hpp"
+#include "../includes/temperatureSensorStatus.hpp"
 #include <vector>
 #include "sensorDataSender.hpp"
 
