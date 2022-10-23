@@ -17,7 +17,7 @@ bool writeDataToConsole()
   {
     for (int counter = 0; counter < WRITE_COUNT; counter++)
     {
-      cout << currentListInAmps[counter] << ", " << temperatureListInCelcious[counter] << endl;
+      cout << "Current : " << currentListInAmps[counter] << ", " << "Temprature : " << temperatureListInCelcious[counter] << endl;
     }
 
     writeStatus = true;
