@@ -1,16 +1,12 @@
-#define CATCH_CONFIG_MAIN
 #include "includes/Receiver.h"
+
 #include <assert.h>
 
 //Test the entries
-Test1(){
+Test1(void){
     float Temperature[numberofreading] = {0};
     float Current[numberofreading]= {0};
-    float obtainedminvalue, obtainedmaxvalue, obtainedSMA, expectedminvalue, expectedmaxvalue, expectedSMA;
     float expectedData [2][2] = {{-10,-46}, {9,-28}};
-    expectedmaxvalue = 150;
-    expectedminvalue = -50;
-    expectedSMA = 11.6;
     receiveAndProcessSensorData(&Temperature[0],&Current[0]);
     for (int i= 0; i<2;i++){
         for(int j = 0; j<i ;j++)
@@ -19,12 +15,10 @@ Test1(){
         REQUIRE(Temperature[j] == expectedData [j][i]);
         }
     }
-    REQUIRE(obtainedminvalue == expectedminvalue);
-    REQUIRE(obtainedminvalue == expectedminvalue);
 }
 
 //Test Min, MAx and SMA
-Test2(){
+Test2(void){
     float Temperature[numberofreading] = {0};
     float Current[numberofreading]= {0};
     float obtainedminvalue, obtainedmaxvalue, obtainedSMA, expectedminvalue, expectedmaxvalue, expectedSMA;
