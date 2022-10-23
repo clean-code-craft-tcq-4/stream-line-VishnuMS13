@@ -1,9 +1,8 @@
 #include "includes/Receiver.h"
-
 #include <assert.h>
 
 //Test the entries
-Test1(void){
+void Test1(void){
     float Temperature[numberofreading] = {0};
     float Current[numberofreading]= {0};
     float expectedData [2][2] = {{-10,-46}, {9,-28}};
@@ -18,7 +17,7 @@ Test1(void){
 }
 
 //Test Min, MAx and SMA
-Test2(void){
+void Test2(void){
     float Temperature[numberofreading] = {0};
     float Current[numberofreading]= {0};
     float obtainedminvalue, obtainedmaxvalue, obtainedSMA, expectedminvalue, expectedmaxvalue, expectedSMA;
