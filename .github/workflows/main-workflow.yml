@@ -19,8 +19,7 @@ jobs:
       run: g++ -Wall -Wextra -fprofile-arcs -ftest-coverage -o testSender *.cpp ./sourceFiles/*.cpp
       
     - name: build receiver 
-      run: g++ -Wall -Wextra -fprofile-arcs -ftest-coverage -o testreceiver *./sourceFiles/*.ReceiverData.c
-      run: g++ -Wall -Wextra -fprofile-arcs -ftest-coverage -o testreceiver Receiver_tester.c
+      run: g++ -Wall -Wextra -fprofile-arcs -ftest-coverage -o testreceiver Receiver_tester.c *./sourceFiles/*.ReceiverData.c
       
     - name: run
       run: ./testSender
