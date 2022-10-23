@@ -1,10 +1,8 @@
-#define CATCH_CONFIG_MAIN 
-#include "test/catch.hpp"
 #include "includes/Receiver.h"
 #include <assert.h>
 
 //Test the entries
-TEST_CASE("Test the entries"){
+void Test_case1(){
     float Temperature[numberofreading] = {0};
     float Current[numberofreading]= {0};
     float expectedData [2][2] = {{-10,-46}, {9,-28}};
@@ -12,14 +10,14 @@ TEST_CASE("Test the entries"){
     for (int i= 0; i<2;i++){
         for(int j = 0; j<i ;j++)
         {
-        REQUIRE(Current[j] == expectedData [j][j]);
-        REQUIRE(Temperature[j] == expectedData [j][i]);
+        assert(Current[j] == expectedData [j][j]);
+        assert(Temperature[j] == expectedData [j][i]);
         }
     }
 }
 
 //Test Min, MAx and SMA
-TEST_CASE("Test Min, MAx and SMA"){
+void Test_case2(){
     float Temperature[numberofreading] = {0};
     float Current[numberofreading]= {0};
     float obtainedminvalue, obtainedmaxvalue, obtainedSMA, expectedminvalue, expectedmaxvalue, expectedSMA;
@@ -31,9 +29,9 @@ TEST_CASE("Test Min, MAx and SMA"){
     obtainedmaxvalue = maxValue(&Temperature[0]);
     obtainedSMA = getSimpleMovingAverage(&Temperature[0]);
 
-    REQUIRE(obtainedminvalue == expectedminvalue);
-    REQUIRE(obtainedmaxvalue == expectedmaxvalue);
-    REQUIRE(obtainedSMA == expectedSMA);
+    assert(obtainedminvalue == expectedminvalue);
+    assert(obtainedmaxvalue == expectedmaxvalue);
+    assert(obtainedSMA == expectedSMA);
 
     //Current
     expectedmaxvalue = 15;
@@ -43,7 +41,12 @@ TEST_CASE("Test Min, MAx and SMA"){
     obtainedmaxvalue = maxValue(&Current[0]);
     obtainedSMA = getSimpleMovingAverage(&Current[0]);
 
-    REQUIRE(obtainedminvalue == expectedminvalue);
-    REQUIRE(obtainedmaxvalue == expectedmaxvalue);
-    REQUIRE(obtainedSMA == expectedSMA);
+    assert(obtainedminvalue == expectedminvalue);
+    assert(obtainedmaxvalue == expectedmaxvalue);
+    assert(obtainedSMA == expectedSMA);
+}
+
+int main(){
+    Test_case1();
+    Test_case2();
 }
