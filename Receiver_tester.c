@@ -1,3 +1,5 @@
+#define CATCH_CONFIG_MAIN
+#include "test/catch.hpp"
 #include "includes/Receiver.h"
 #include <assert.h>
 
