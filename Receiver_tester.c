@@ -1,5 +1,5 @@
 #define CATCH_CONFIG_MAIN
-#include "../includes/Receiver.h"
+#include "includes/Receiver.h"
 #include <assert.h>
 
 //Test the entries
