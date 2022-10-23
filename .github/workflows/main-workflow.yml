@@ -23,6 +23,9 @@ jobs:
       
     - name: run
       run: ./testSender
+      
+    - name: Pipeline sender/receiver
+      run: ./testsender | ./testreceiver
 
     - name: collect coverage
       run: gcovr -r . --html --html-details -o coverage.html --print-summary
