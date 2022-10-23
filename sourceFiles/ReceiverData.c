@@ -1,4 +1,4 @@
-#include "Receiver.h"
+#include "includes/Receiver.h"
 
 void readDataFromConsole(float* Current, float* Temperature){
     for (int i = 0; i < numberofreading; i++ )
