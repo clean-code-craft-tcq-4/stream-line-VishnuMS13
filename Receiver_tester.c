@@ -48,7 +48,7 @@ void Test2(void){
     REQUIRE(obtainedSMA == expectedSMA);
 }
 
-int main(void){
+void main(void){
     Test1();
     Test2();
 }
