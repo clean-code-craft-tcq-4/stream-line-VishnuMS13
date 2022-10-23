@@ -1,10 +1,10 @@
-
+#define CATCH_CONFIG_MAIN 
 #include "test/catch.hpp"
 #include "includes/Receiver.h"
 #include <assert.h>
 
 //Test the entries
-void Test1(void){
+TEST_CASE("Test the entries"){
     float Temperature[numberofreading] = {0};
     float Current[numberofreading]= {0};
     float expectedData [2][2] = {{-10,-46}, {9,-28}};
@@ -19,7 +19,7 @@ void Test1(void){
 }
 
 //Test Min, MAx and SMA
-void Test2(void){
+TEST_CASE("Test Min, MAx and SMA"){
     float Temperature[numberofreading] = {0};
     float Current[numberofreading]= {0};
     float obtainedminvalue, obtainedmaxvalue, obtainedSMA, expectedminvalue, expectedmaxvalue, expectedSMA;
@@ -46,10 +46,4 @@ void Test2(void){
     REQUIRE(obtainedminvalue == expectedminvalue);
     REQUIRE(obtainedmaxvalue == expectedmaxvalue);
     REQUIRE(obtainedSMA == expectedSMA);
-}
-
-int main(){
-    Test1();
-    Test2();
-    return 0;
 }
