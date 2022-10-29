@@ -4,7 +4,7 @@
 void readDataFromConsole(float* Current, float* Temperature){
     for (int i = 0; i < numberofreading; i++ )
      {
-        scanf("%f, %f\n", &Current[i], &Temperature[i]);
+        scanf("%f,%f\n", &Current[i], &Temperature[i]);
      }
 }
 
