@@ -8,10 +8,9 @@ void Test_case1(){
     float expectedData [2][2] = {{-10,-46}, {9,-28}};
     receiveAndProcessSensorData(&Temperature[0],&Current[0]);
     for (int i= 0; i<2;i++){
-        for(int j = 0; j<i ;j++)
         {
-        assert(Current[j] == expectedData [j][j]);
-        assert(Temperature[j] == expectedData [j][i]);
+        assert(Current[i] == expectedData [i][0]);
+        assert(Temperature[i] == expectedData [i][1]);
         }
     }
 }
