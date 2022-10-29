@@ -4,7 +4,7 @@
 void readDataFromConsole(float* Current, float* Temperature){
     for (int i = 0; i < numberofreading; i++ )
      {
-        scanf("%f,%f\n", &Current[i], &Temperature[i]);
+        scanf("%.2f,%.2f\n", &Current[i], &Temperature[i]);
      }
 }
 
@@ -34,7 +34,7 @@ float getSimpleMovingAverage(float *sensordata){
    {
      sum += sensordata[i];
    }
-   average = sum/5.0 ;// Divide by 5 to get the average of last 5 values
+   average = sum/5.00 ;// Divide by 5 to get the average of last 5 values
    return average;
 }
 
