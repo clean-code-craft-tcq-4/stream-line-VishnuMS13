@@ -30,7 +30,7 @@ float getSimpleMovingAverage(float *sensordata){
     //To get SMA of last 5 values
    float average = 0.0;
    float sum = 0.0;
-   for(int i=0 ; i < numberofreading-5; i++)
+   for(int i=numberofreading-5 ; i < numberofreading; i++)
    {
      sum += sensordata[i];
    }

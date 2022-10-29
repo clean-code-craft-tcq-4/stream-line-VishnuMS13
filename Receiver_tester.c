@@ -42,7 +42,7 @@ void Test_case2(){
     printf("The SMA of Temperature is %f \n",SMATemp);
     // Get the SMA of Current
     float SMACurrent = getSimpleMovingAverage(&Current[0]);
-    printf("The SMA of Temperature is %f \n",SMACurrent);
+    printf("The SMA of Current is %f \n",SMACurrent);
 }
 
 int main(){
