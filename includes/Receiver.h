@@ -8,4 +8,5 @@ void readDataFromConsole(float* Current, float* Temperature);
 float maxValue(float *sensordata);
 float minValue(float *sensordata);
 float getSimpleMovingAverage(float *sensordata);
+int printReceivedDataToConsole(float *sensorparameter);
 void receiveAndProcessSensorData(float* Current, float* Temperature);

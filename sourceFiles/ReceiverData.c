@@ -37,6 +37,15 @@ float getSimpleMovingAverage(float *sensordata){
    return average;
 }
 
+int printReceivedDataToConsole(float *sensorparameter){
+  printf("Data received from sender\n");
+  for(int index = 0; index < numberofreading; index++)
+  {
+    printf("%f\n",sensorparameter[index]);
+  }
+  return 1;
+}
+
 void receiveAndProcessSensorData(float* Current, float* Temperature){
    readDataFromConsole(Current,Temperature);
    }
