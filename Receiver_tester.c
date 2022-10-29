@@ -8,28 +8,34 @@ void Test_case1(){
     float Current[numberofreading]= {0};
     float obtainedminvalue, obtainedmaxvalue, expectedminvalue, expectedmaxvalue;
     receiveAndProcessSensorData(&Current[0],&Temperature[0]);
-    //Temparture
-    printReceivedDataToConsole(Temperature);
-    expectedmaxvalue = 150;
-    expectedminvalue = -50;
-    obtainedminvalue = minValue(&Temperature[0]);
-    obtainedmaxvalue = maxValue(&Temperature[0]);
-    printf("The Minimum value of Temperature is %f \n",obtainedminvalue);
-    printf("The Maximum value of Temperature is %f \n",obtainedmaxvalue);
-    assert(obtainedminvalue >= expectedminvalue);
-    assert(obtainedmaxvalue <= expectedmaxvalue);
-
     //Current
     expectedmaxvalue = 15;
     expectedminvalue = -15;
     obtainedminvalue = minValue(&Current[0]);
     obtainedmaxvalue = maxValue(&Current[0]);
+
+    printf("Current values from sender");
     printReceivedDataToConsole(Current);
     printf("The Minimum value of Current is %f \n",obtainedminvalue);
     printf("The Maximum value of Current is %f \n",obtainedmaxvalue);
 
     assert(obtainedminvalue >= expectedminvalue);
     assert(obtainedmaxvalue <= expectedmaxvalue);
+
+    //Temparture
+    expectedmaxvalue = 150;
+    expectedminvalue = -50;
+    obtainedminvalue = minValue(&Temperature[0]);
+    obtainedmaxvalue = maxValue(&Temperature[0]);
+
+    printf("Temperature values from sender");
+    printReceivedDataToConsole(Temperature);
+    printf("The Minimum value of Temperature is %f \n",obtainedminvalue);
+    printf("The Maximum value of Temperature is %f \n",obtainedmaxvalue);
+
+    assert(obtainedminvalue >= expectedminvalue);
+    assert(obtainedmaxvalue <= expectedmaxvalue);
+    
 }
 
 void Test_case2(){
