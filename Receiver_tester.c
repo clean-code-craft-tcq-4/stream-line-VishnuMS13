@@ -1,4 +1,5 @@
 #include "includes/Receiver.h"
+#include "includes/sensorDataSender.hpp"
 #include <assert.h>
 
 //Check if min and max values are within limits and display on the console
