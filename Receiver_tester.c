@@ -28,8 +28,8 @@ void Test_case2(){
     obtainedmaxvalue = maxValue(&Temperature[0]);
     //obtainedSMA = getSimpleMovingAverage(&Temperature[0]); If the generated values are constant, for random generation the values are changed constantly 
 
-    assert(obtainedminvalue == expectedminvalue);
-    assert(obtainedmaxvalue == expectedmaxvalue);
+    assert(obtainedminvalue <= expectedminvalue);
+    assert(obtainedmaxvalue <= expectedmaxvalue);
     //assert(obtainedSMA == expectedSMA); If the generated values are constant, for random generation the values are changed constantly
 
     //Current
