@@ -1,4 +1,5 @@
 #include "../includes/Receiver.h"
+#include "../includes/sensorDataSender.hpp"
 
 void readDataFromConsole(float* Current, float* Temperature){
     for (int i = 0; i < numberofreading; i++ )
