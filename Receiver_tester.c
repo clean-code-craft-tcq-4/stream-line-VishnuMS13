@@ -8,6 +8,7 @@ void Test_case1(){
     float Current[numberofreading]= {0};
     float obtainedminvalue, obtainedmaxvalue, expectedminvalue, expectedmaxvalue;
     receiveAndProcessSensorData(&Current[0],&Temperature[0]);
+    
     //Current
     expectedmaxvalue = 15;
     expectedminvalue = -15;
