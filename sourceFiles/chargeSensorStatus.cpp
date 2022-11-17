@@ -7,8 +7,8 @@ using namespace std;
 vector<int> getCurrentListInAmps(int minimumValue, int maximumValue, int numberOfReadings)
 {
 
-  std::random_device rd;                         // obtain a random number from hardware
-  std::mt19937 gen(rd());                        // seed the generator
+  std::random_device randomDevice;                         // obtain a random number from hardware
+  std::mt19937 gen(randomDevice());                        // seed the generator
   std::uniform_int_distribution<> distr(minimumValue, maximumValue); // define the range
 
   vector<int> currentListInAmps;
